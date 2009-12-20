@@ -86,9 +86,8 @@ voicei = \relative c''{
 		\context {
 			\PianoStaff
 			\accepts Dynamics
-			\tempo "" 8 = 96
-
 		}
+		\tempo 8 = 96
 	}
 	
 }
@@ -96,8 +95,8 @@ voicei = \relative c''{
 	\column{
 		\line{ Die Hirten: }
 		\line{ Lasset uns sehen in Bethlehems Stall, }
-		\line{ was uns verheissen der himmlische Schall. }
-		\line{ Was wir dort finden, lasset uns kuenden, }
+		\line{ was uns verheißen der himmlische Schall. }
+		\line{ Was wir dort finden, lasset uns künden, }
 		\line{ lasset uns preisen in frommen Weisen: Halleluja. }
 	}
 }
@@ -105,12 +104,13 @@ voicei = \relative c''{
 	\wordwrap-string #"
 		Alle:
 		
-		Wahrlich, die Engel verkuendigen heut'
+		Wahrlich, die Engel verkündigen heut'
 		
-		Bethlehems Hirtenvolk gar gro�e Freud'.
+		Bethlehems Hirtenvolk gar große Freud'.
 		
 		Nun soll es werden Friede auf Erden,
 		
 		den Menschen allen ein Wohlgefallen: Ehre sei Gott!"
 }
 
+% vim: set fenc=utf-8
