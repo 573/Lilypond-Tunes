@@ -100,6 +100,13 @@ LHStimmeZweiNoten = \relative c {
         \global  % Taktangabe und Tonart setzen
         \set Staff.midiInstrument = "acoustic grand"
         \clef "treble"
+        \new Voice {
+%          \overrideProperty "Score.NonMusicalPaperColumn"
+%          #'line-break-system-details #'((Y-offset . 35))
+          s1 * 3 \break
+          s1 * 3 \break
+          s1 * 2
+        }
         \new Voice { \voiceOne \RHStimmeEinsNoten }
         \new Voice { \voiceTwo \RHStimmeZweiNoten }
       >>  % RH Staff-Kontext beenden
@@ -107,31 +114,23 @@ LHStimmeZweiNoten = \relative c {
         \global
         \set Staff.midiInstrument = "acoustic grand"
         \clef "bass"
+        \new Voice {
+%          \overrideProperty "Score.NonMusicalPaperColumn"
+%          #'line-break-system-details #'((Y-offset . 35))
+          s1 * 3 \break
+          s1 * 3 \break
+          s1 * 2
+        }
         \new Voice { \voiceThree \LHStimmeEinsNoten }
         \new Voice { \voiceFour  \LHStimmeZweiNoten }
       >>  % LH Staff-Kontext beenden
     >>  % Klaviersystem beenden
-%    \layout {
-%      \context {
-%        \PianoStaff
-%			  \accepts Dynamics
-%			  \override VerticalAlignment #'forced-distance = #14
-%       }
-%     }
-%	   \midi {
-%       \context {
-%         \PianoStaff
-%         \accepts Dynamics
-%         % TODO ignored
-%         tempoWholesPerMinute = #(ly:make-moment 30 2)
-%       }
-%     }
   >>
-  \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 12 4)
-    }
-  }
+%  \midi {
+%    \context {
+%      \Score
+%      tempoWholesPerMinute = #(ly:make-moment 12 4)
+%    }
+%  }
 }  % Partitur-Kontext beenden
 
