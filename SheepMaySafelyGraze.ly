@@ -52,15 +52,7 @@ RHStimmeEinsNoten = \relative c'' {
   %16
   d4.   e8   h4.   a16 g
   %17
-  ) g8   \relative c'' { d16( h)   d8 d16( h)   d8( e)   e( g) }
-  %18
-  c8 c16( a)   c8 c16( a)   c8( fis)   fis( a)
-  %19
-  \repeat unfold 2 { g8( g32) a h16   g h a d, }
-  %20
-  \repeat unfold 2 { g8 h32( c d16   h g a fis ) }
-  %21
-  s1
+  ) s1
 }
 
 RHStimmeZweiNoten = \relative g'{
@@ -107,14 +99,6 @@ RHStimmeZweiNoten = \relative g'{
   \relative c' { fis8 g g g   \relative g { r h32 c d16\glissando \change Staff =
   "LinkeHand" \stemUp h16 g d fis \change Staff  = "RechteHand" }}
   %17
-  h,8   \relative g' { h16( g)   h8 h16( g)   h8( c)   c( e) }
-  %18
-  \relative c'' { a8 a16( fis)   a8 a16( fis)   a8( c)   a( c)
-  %19 oder besser h8 h32 ???
-  h8( h)   r4   e8( e)   r4
-  %20
-  h4   r   h4   r8 c }
-  %21
   s1
 }
 
@@ -157,14 +141,6 @@ LHStimmeEinsNoten = \relative g {
   %16
   \relative c' { c8 h   c4   g   s4 }
   %17
-  g4   f!   e   c
-  %18
-  fis?2.   d4
-  %19
-  \relative c' { d2   h4.   d8 }
-  %20
-  g4.   \relative c' { d8   h4   r8 d8 }
-  %21
   s1
 }
 
@@ -213,15 +189,7 @@ LHStimmeZweiNoten = \relative c {
   g'8 g c, c   d d d d
   \mergeDifferentlyHeadedOff
   \mergeDifferentlyDottedOff 
-  %17 + 18
-  \relative c { \repeat unfold 2 { \repeat unfold 8 { g8 } } }
-  %18 s. o.
-  %19
-  g8 g fis fis   e e d d
-  %20
-  c8 c d d   e d16 c   d8 d
-  %21
-  s1
+  %17
 }
 
 
