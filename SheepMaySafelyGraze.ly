@@ -60,6 +60,14 @@ RHStimmeEinsNoten = \relative c'' {
   %20
   \repeat unfold 2 { g8 h32( c d16   h g a fis ) }
   %21
+  g4   e(   dis4.   e8
+  %22
+  c4   h   g)   {fis8( e}
+  %23
+  a4   {h8 gis}   a4.)   h8(
+  %24
+  c4   {d8 h}   c4)   {e8( d}
+  %25
   s1
 }
 
@@ -115,6 +123,14 @@ RHStimmeZweiNoten = \relative g'{
   %20
   h4   r   h4   r8 c }
   %21
+  \relative g' { h4 h a g
+  %22
+  a4 fis } s h
+  %23
+  e4 d e d
+  %24
+  e4 {f!8 d} e4 e
+  %25
   s1
 }
 
@@ -165,6 +181,16 @@ LHStimmeEinsNoten = \relative g {
   %20
   g4.   \relative c' { d8   h4   r8 d8 }
   %21
+  {g8} r \relative c' { e4 h2
+  %22
+  e4 dis\glissando \change Staff = "RechteHand" e\glissando \change Staff = "LinkeHand"
+} % relative
+  gis
+  %23
+  a4 gis a e
+  %24
+  a4 f! e gis
+  %25
   s1
 }
 
@@ -221,6 +247,14 @@ LHStimmeZweiNoten = \relative c {
   %20
   c8 c d d   e d16 c   d8 d
   %21
+  {\relative c { g } g g g } {fis fis g g}
+  %22
+  {a a h h} \relative c { {e e d! d}
+  %23
+  {c c h h} {c c gis gis}
+  %24
+  {a a gis gis} {a a h h} }
+  %25
   s1
 }
 
