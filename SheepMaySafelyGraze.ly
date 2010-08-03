@@ -68,7 +68,23 @@ RHStimmeEinsNoten = \relative c'' {
   %24
   c4   {d8 h}   c4)   {e8( d}
   %25
-  s1
+  e4 f! \relative c'' { gis) {a8( h}
+  %26
+  c4 {h8 a} {a8)} } {e16( c)} {e8 e16( c)}
+  %27
+  {e8( f!) f( a)} \relative c'' { {d d16( h)} {d8 d16( h)}
+  %28
+  {d8( gis)} {gis( h)} {a8(( a32) h c16} {a16 c h e,)} }
+  %29
+  {a8( a32) h c16} {a c h e,} {a8 c32( d e16} {c a h gis}
+  %30
+  {a4)} s \relative c'' { a8 r {gis8 fis?}
+  %31
+  g4. h8( a4 {g8 fis16 g}
+  %32
+  fis4 {e8 )d} } \relative c'' { d( {cis8 h} }
+  %33
+  s1)
 }
 
 RHStimmeZweiNoten = \relative g'{
@@ -131,6 +147,22 @@ RHStimmeZweiNoten = \relative g'{
   %24
   e4 {f!8 d} e4 e
   %25
+  e4 a e {e8 f!}
+  %26
+  a4 gis e8 \relative g' { {c16 a} {c8 c16 a}
+  %27
+  {c8 d d fis} } \relative c'' { {h8 h16 gis} {h8 h16 gis}
+  %28
+  {h8 d} {h d} {c( c)} } s4
+  %29
+  \relative c'' { {f8( f)} } s4 {a8 s} {s h}
+  %30
+  {c8 c32( d e16} {c a h gis)} e4( c
+  %31
+  d4) d e2
+  %32
+  fis4 r4 fis2
+  %33
   s1
 }
 
@@ -191,6 +223,22 @@ LHStimmeEinsNoten = \relative g {
   %24
   a4 f! e gis
   %25
+  a2 h4 {a8} \change Staff = "RechteHand" d8
+  %26
+  e4 d c8 r r4 \change Staff = "LinkeHand"
+  %27
+  a2 gis
+  %28
+  e2 \relative c' { e
+  %29
+  c4. e8 a,4 e'4
+  %30
+  c4 r8 d8 c8 r r4
+  %31
+  g2 a
+  %32
+  a4 ais h2 }
+  %33
   s1
 }
 
@@ -249,12 +297,28 @@ LHStimmeZweiNoten = \relative c {
   %21
   {\relative c { g } g g g } {fis fis g g}
   %22
-  {a a h h} \relative c { {e e d! d}
+  {a8 a h h} \relative c { {e e d! d}
   %23
-  {c c h h} {c c gis gis}
+  {c8 c h h} {c c gis gis}
   %24
-  {a a gis gis} {a a h h} }
+  {a8 a gis gis} {a a h h}
   %25
+  {c8 c d d} {d d c d}
+  %26
+  {e8 e \relative g, { e e }} \relative g, { {a a a a}
+  %27
+  {a8 a a a} {a a a a}
+  %28
+  {a8 a a a} } {a a g! g} }
+  %29
+  {f!8 f e e} {d d e e}
+  %30
+  {f!8 e16 d} {e8 e} a \relative g, { { a a a }
+  %31
+  {h8 h h h} {cis cis cis cis}
+  %32
+  {d8 d cis cis} {h8 h h h} }
+  %33
   s1
 }
 
