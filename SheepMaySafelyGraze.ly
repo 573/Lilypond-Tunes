@@ -20,39 +20,39 @@ global =  {
 
   
 RHStimmeEinsNoten = \relative c'' {
-  %1
-  \repeat unfold 2 { d8 d16 h }   d8 e   e g
-  %2
-  \repeat unfold 2 { c,8 c16 a }   c8 fis   fis a
-  %3
-  \repeat unfold 2 { g8 g32 a h16   g h a d, }
-  %4
-  \repeat unfold 2 { g8 h32 c d16   h g a fis }
-  %5
-  g8 r8   \relative g' { h8 a   a4.   h8
+  %%1
+  \repeat unfold 2 { d8 d16( h) }  d8[( e)]  e[(  g)]
+
+  \repeat unfold 2 { c,8 c16( a) }  c8[( fis)]  fis[( a)]
+
+  g8[(\( g32) a h16]  [g h a d,]\)  g8[(\( g32) a h16]  [g h a d,]
+
+  g8[\) h32 c d16]  h[\( g a fis]  g8[\) h32 c d16]  h[\( g a fis]
+  %%5
+  g8\) r8   \relative g' { h8( a   a4.)   h8(
   %6
-  c4   e8 d   h4   a8 g
+  c4   e8 d   h4   a8 g)
   %7
-  h8 g fis e   a4.   h8
+  h8[\( g fis e]   a4.   h8
   %8
-  fis4   e8 d   d4   r4 }
+  fis4   e8 d   d4\)   r4 }
   %9
   r8 d16 h   d8 d16 h   d8 e   e g
   %10
-  \relative g' { \repeat unfold 2 { e8 e16( c) }   e8( fis)   fis( a) }
+  \relative g' { \repeat unfold 2 { e8 e16( c) }  e8( fis)  fis( a) }
   %11 +
   %12
-  \repeat unfold 2 { d4(   e8 d   d h   a g) }
+  \repeat unfold 2 { d4(  e8 d  d h  a g) }
   %13
-  c4.(   d8   h a g a
+  c4.(  d8  h a g a
   %14
-  fis4.   g8 )g   d'16( h)   d8 d16( h)
+  fis4.  g8 g)  d'16 ~ h  d8 d16 ~ h
   %15
-  d8( e)   e( g)   e( c   h a
+  d8 ~ e  e ~ g  e( ~ c  h a
   %16
-  d4.   e8   h4.   a16 g
+  d4.  e8  h4.  a16 g
   %17
-  ) g8   \relative c'' { d16( h)   d8 d16( h)   d8( e)   e( g) }
+  ) g8  \relative c'' { d16 ~ h  d8 d16 ~ h  d8 ~ e  e ~ g }
   %18
   c8 c16( a)   c8 c16( a)   c8( fis)   fis( a)
   %19
@@ -82,9 +82,15 @@ RHStimmeEinsNoten = \relative c'' {
   %31
   g4. h8( a4 {g8 fis16 g}
   %32
-  fis4 {e8 )d} } \relative c'' { d( {cis8 h} }
+  fis4 {e8 )d} } \relative c'' { d {cis8 h} }
   %33
-  s1)
+  %34
+  %35
+  %36
+  %37
+  %38
+  %39
+  %40
 }
 
 RHStimmeZweiNoten = \relative g'{
@@ -163,7 +169,15 @@ RHStimmeZweiNoten = \relative g'{
   %32
   fis4 r4 fis2
   %33
-  s1
+  h4. d8 cis8 d16 e c8 h
+  %34
+  ais4 gis8 fis r8 fis16 dis( fis8) fis16( dis)
+  %35
+  %36
+  %37
+  %38
+  %39
+  %40
 }
 
 LHStimmeEinsNoten = \relative g {
@@ -239,7 +253,13 @@ LHStimmeEinsNoten = \relative g {
   %32
   a4 ais h2 }
   %33
-  s1
+  %34
+  %35
+  %36
+  %37
+  %38
+  %39
+  %40
 }
 
 LHStimmeZweiNoten = \relative c {
@@ -319,7 +339,13 @@ LHStimmeZweiNoten = \relative c {
   %32
   {d8 d cis cis} {h8 h h h} }
   %33
-  s1
+  %34
+  %35
+  %36
+  %37
+  %38
+  %39
+  %40
 }
 
 
