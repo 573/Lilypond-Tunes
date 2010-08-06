@@ -18,24 +18,27 @@ global =  {
 	\bar "|."
 }
 
+sD = \stemDown
+sU = \stemUp
   
 RHStimmeEinsNoten = \relative c'' {
-  %%1
-  \repeat unfold 2 { d8 d16( h) }  d8[( e)]  e[(  g)]
-
-  \repeat unfold 2 { c,8 c16( a) }  c8[( fis)]  fis[( a)]
-
-  g8[(\( g32) a h16]  [g h a d,]\)  g8[(\( g32) a h16]  [g h a d,]
-
-  g8[\) h32 c d16]  h[\( g a fis]  g8[\) h32 c d16]  h[\( g a fis]
-  %%5
-  g8\) r8   \relative g' { h8( a   a4.)   h8(
+%  \voiceOne
+  %1
+  \sD \repeat unfold 2 { d8 d16( h) }  d8[( e)]  e(  g)
+  %2
+  \sU \repeat unfold 2 { c,8 c16( a) }  \sD c8[( fis)]  fis[( a)]
+  %3
+  g8[\(( g32) a h16]  g[ h a d,]\)  g8[\(( g32) a h16]  g[ h a d,]
+  %4
+  g8[\) h32 c d16]  h[( g a fis]  g8[) h32 c d16]  h[( g a fis]
+  %5
+  g8) r8   \relative g' { h8( a   a4.)   h8(
   %6
   c4   e8 d   h4   a8 g)
   %7
-  h8[\( g fis e]   a4.   h8
+  h8[( g fis e]   a4.   h8
   %8
-  fis4   e8 d   d4\)   r4 }
+  fis4   e8 d   d4)   r4 }
   %9
   r8 d16 h   d8 d16 h   d8 e   e g
   %10
@@ -46,13 +49,13 @@ RHStimmeEinsNoten = \relative c'' {
   %13
   c4.(  d8  h a g a
   %14
-  fis4.  g8 g)  d'16 ~ h  d8 d16 ~ h
+  fis4.  g8 g)  d'16( h)  d8 d16( h)
   %15
-  d8 ~ e  e ~ g  e( ~ c  h a
+  d8( e)  e( g)  e\(( c)  h a
   %16
   d4.  e8  h4.  a16 g
   %17
-  ) g8  \relative c'' { d16 ~ h  d8 d16 ~ h  d8 ~ e  e ~ g }
+  \) g8  \relative c'' { d16( h)  d8 d16( h)  d8( e)  e( g) }
   %18
   c8 c16( a)   c8 c16( a)   c8( fis)   fis( a)
   %19
@@ -62,42 +65,55 @@ RHStimmeEinsNoten = \relative c'' {
   %21
   g4   e(   dis4.   e8
   %22
-  c4   h   g)   {fis8( e}
+  c4   h   g)   fis8( e
   %23
-  a4   {h8 gis}   a4.)   h8(
+  a4   h8 gis   a4.)   h8(
   %24
-  c4   {d8 h}   c4)   {e8( d}
+  c4   d8 h   c4)   e8( d
   %25
-  e4 f! \relative c'' { gis) {a8( h}
+  e4 f! \relative c'' { gis) a8( h
   %26
-  c4 {h8 a} {a8)} } {e16( c)} {e8 e16( c)}
+  c4 h8 a a8) } e16( c) e8 e16( c)
   %27
-  {e8( f!) f( a)} \relative c'' { {d d16( h)} {d8 d16( h)}
+  e8( f!) f( a) \relative c'' { d d16( h) d8 d16( h)
   %28
-  {d8( gis)} {gis( h)} {a8(( a32) h c16} {a16 c h e,)} }
+  d8( gis) gis( h) a8\(( a32) h c16 a16 c h e,\) }
   %29
-  {a8( a32) h c16} {a c h e,} {a8 c32( d e16} {c a h gis}
+  a8( a32) h c16 a c h e, a8 c32( d e16 c a h gis
   %30
-  {a4)} s \relative c'' { a8 r {gis8 fis?}
+  a4) s \relative c'' { a8 r gis8 fis?
   %31
-  g4. h8( a4 {g8 fis16 g}
+  g4. h8( a4 g8 fis16 g
   %32
-  fis4 {e8 )d} } \relative c'' { d {cis8 h} }
+  fis4 e8 d) } \relative c'' { d4( cis8 h
   %33
+  h4.) d8( cis8[ d16 e] cis8 h
   %34
+  ais4 gis8 fis) } r8 fis16[( dis)] fis8[ fis16( dis)]
   %35
+  <dis fis>8[( <e g>)] <e g>[( <g h>)] a[ a16( e)] e8[ e16( c)]
   %36
+  e8[( fis)] fis[( a)] \relative c'' { a8[ a16 fis] a8[ a16 fis]
   %37
+  a8[ g] g4 gis8[ gis16 e] gis8[ gis16 e]
   %38
+  <gis h>8[ <a cis>] a4 a fis8[ fis16 d]
   %39
+  cis8 e cis4 d d
   %40
+  <d fis>4  <cis e>8 d  s2 }
 }
 
+% Assuming voiceThree in Left Hand (context "LinkeHand") and so
+goingThreeFromTwo = \change Staff = "LinkeHand" \voiceThree
+goingTwoFromThree = \change Staff = "RechteHand" \voiceTwo
+
 RHStimmeZweiNoten = \relative g'{
+%  \voiceTwo
   %1
-  \repeat unfold 2 { h8 h16 g }   h8 c   c e
+  \repeat unfold 2 { h8 h16 g }   h8[ c]   c e
   %2
-  \repeat unfold 2 { a,8 a16 fis }   a8 c   a8 c
+  \sU \repeat unfold 2 { a,8 a16 fis }   \sD a8[ c]   a8 c
   %3
   h8 h   s4   e8 e   s4
   %4
@@ -115,8 +131,8 @@ RHStimmeZweiNoten = \relative g'{
   %d4   f!8 e   \set followVoice = ##t e4. \change Staff = "LinkeHand" fis?8
   %\change Staff = "RechteHand" }
   % [2] as Glissando + ChangeStaff
-  d4   f!8 e   e4.\glissando \change Staff = "LinkeHand" fis?8
-  \change Staff = "RechteHand" }
+  d4   f!8 e   e4.\glissando \goingThreeFromTwo fis?8
+  \goingTwoFromThree }
   %10
   s1
   %11 +
@@ -131,11 +147,11 @@ RHStimmeZweiNoten = \relative g'{
   %14
   d8 d d c   h   h'16( g)   h8 h16( g)
   %15
-  h8 c   c e   \relative c' { \change Staff = "LinkeHand" c8 c16 a   c8 c16 a
-  \change Staff = "RechteHand" }
+  h8 c   c e   \relative c' { \goingThreeFromTwo c8 c16 a   c8 c16 a
+  \goingTwoFromThree }
   %16
-  \relative c' { fis8 g g g   \relative g { r h32 c d16\glissando \change Staff =
-  "LinkeHand" \stemUp h16 g d fis \change Staff  = "RechteHand" }}
+  \relative c' { fis8 g g g   \relative g { r h32 c d16\glissando
+  \goingThreeFromTwo \stemUp h16 g d fis \goingTwoFromThree }}
   %17
   h,8   \relative g' { h16( g)   h8 h16( g)   h8( c)   c( e) }
   %18
@@ -169,18 +185,26 @@ RHStimmeZweiNoten = \relative g'{
   %32
   fis4 r4 fis2
   %33
-  h4. d8 cis8 d16 e c8 h
+  fis8 e  g4  g2 
   %34
-  ais4 gis8 fis r8 fis16 dis( fis8) fis16( dis)
+  \relative c' { <cis fis>4  ais8 cis }  a!2(
   %35
+  a4)\glissando\goingThreeFromTwo g8[ a16 fis]  g2(
   %36
+  g8) fis  fis4\glissando\goingTwoFromThree
+  \relative c'' { c!2(\(
   %37
+  c4\)  h8[) d16( cis]  d2\(
   %38
+  d8[\) cis]  h8[ cis)]  cis4(  h8 a
   %39
+  g4  fis8[ g16( e]  a16[ g fis g]  a16[ g a h] }
   %40
+  s2 d2)
 }
 
 LHStimmeEinsNoten = \relative g {
+%  \voiceThree
   %1
   g2   g
   %2
@@ -200,8 +224,8 @@ LHStimmeEinsNoten = \relative g {
   %9
   g2 r
   %10
-  \relative g' { g4\glissando \change Staff = "RechteHand" h8 a \glissando
-  \change Staff = "LinkeHand" fis4 e8 d }
+  \relative g' { g4\glissando\goingTwoFromThree h8 a \glissando
+  \goingThreeFromTwo fis4 e8 d }
   %11 +
   %12
   \repeat unfold 2 { g4.   fis8   g4 }
@@ -229,7 +253,7 @@ LHStimmeEinsNoten = \relative g {
   %21
   {g8} r \relative c' { e4 h2
   %22
-  e4 dis\glissando \change Staff = "RechteHand" e\glissando \change Staff = "LinkeHand"
+  e4 dis\glissando\goingTwoFromThree e\glissando\goingThreeFromTwo
 } % relative
   gis
   %23
@@ -237,9 +261,9 @@ LHStimmeEinsNoten = \relative g {
   %24
   a4 f! e gis
   %25
-  a2 h4 {a8} \change Staff = "RechteHand" d8
+  a2 h4 {a8} \goingTwoFromThree d8
   %26
-  e4 d c8 r r4 \change Staff = "LinkeHand"
+  e4 d c8 r r4 \goingThreeFromTwo
   %27
   a2 gis
   %28
@@ -253,13 +277,22 @@ LHStimmeEinsNoten = \relative g {
   %32
   a4 ais h2 }
   %33
+  g4 fis e2
   %34
+  \relative g, { fis4 } s4 fis h4
   %35
+  \relative g { e4 }  \goingTwoFromThree \relative c''
+  { r4 e4  cis8[ cis16 a]
   %36
+  cis8[ d] d[ fis] } \goingThreeFromTwo d2
   %37
+  d2  h
   %38
+  e2  e8[ e16 cis]  d8 r8
   %39
+  a2  a4  h
   %40
+  s1
 }
 
 LHStimmeZweiNoten = \relative c {
@@ -337,15 +370,23 @@ LHStimmeZweiNoten = \relative c {
   %31
   {h8 h h h} {cis cis cis cis}
   %32
-  {d8 d cis cis} {h8 h h h} }
+  {d8 d cis cis} {h8 h h h}
   %33
+  g8 g fis fis  e e e e }
   %34
+  fis8 fis e e  dis dis h h
   %35
+  \relative g' { e8 e d! d  cis cis a a
   %36
+  d8 d d d }  d d d d
   %37
+  g8 g fis fis  e e e e
   %38
+  a8 a a a  g! g fis fis
   %39
+  e8 e e e  fis fis g g
   %40
+  a8 a \relative g, { a a  <d fis>[ <fis a>] <fis a>[ <a c!>] }
 }
 
 
