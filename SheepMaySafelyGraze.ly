@@ -91,7 +91,7 @@ RHStimmeEinsNoten = \relative c'' {
   %34
   ais4 gis8 fis) } r8 fis16[( dis)] fis8[ fis16( dis)]
   %35
-  <dis fis>8[( <e g>)] <e g>[( <g h>)] a[ a16( e)] e8[ e16( c)]
+  <dis fis>8[( <e g>)] <e g>[( <g h>)] a[ a16( e)] e8[ e16( cis)]
   %36
   e8[( fis)] fis[( a)] \relative c'' { a8[ a16 fis] a8[ a16 fis]
   %37
