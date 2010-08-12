@@ -1,7 +1,7 @@
 \version "2.12.0"
 
 \header {
-  title = "Sheeps may safely graze - Schafe können sicher weiden (from Cantata No. 208)"
+  title = "Traumfresserchen"
   source = "Printed Sheet"
   composer = "J. S. Bach"
   enteredby = "dk"
@@ -13,7 +13,7 @@
 \include "deutsch.ly"
 
 global =  {
-	\key g \major
+	\key fis \major
 	\time 4/4
 	\bar "|."
 }
@@ -24,85 +24,97 @@ sU = \stemUp
 RHStimmeEinsNoten = \relative c'' {
 %  \voiceOne
   %1
-  \sD \repeat unfold 2 { <h d>8 <h d>16( <g h>) }  <h d>8[( <c e>)]  <c e>(  <e g>)
+  e4 e8 e e4
   %2
-  \sU \repeat unfold 2 { <a, c>8 <a c>16( <fis a>) }  \sD <a c>8[( <c fis>)]
-  <a fis'>[( <c a'>)]
+  e4 d8 d d4
   %3
-  <h g'>8[\(( <h g'>32) a' h16]  g[ h a d,]\)  <e g>8[\(( <e g>32) a h16]  g[ h a d,]
+  r1
   %4
-  <h g'>8[\) h'32( c d16)]  h[( g a fis]  <h, g>8[) h32( c d16)]  h[( g <c a> fis]
+  d4 \relative c { h } d
   %5
-  g8) r8   \relative g' { h8( a   a4.)   h8(
+  d4 cis8 cis cis4
   %6
-  c4   e8 d   h4   a8 g)
+  r1
   %7
-  h8[( g fis e]   a4.   h8
+  cis4 d cis
   %8
-  fis4   e8 d   d4)   r4 }
+  cis4 h8 h h4
   %9
-  r8 d16 h   d8 d16 h   d8 e   e g
+  r1
   %10
-  \relative g' { \repeat unfold 2 { e8 e16( c) }  e8( fis)  fis( a) }
-  %11 +
+  h4 cis d
+  %11
+  fis4 e8 e e4
   %12
-  \repeat unfold 2 { d4(  e8 d  d h  a g) }
+  r1
   %13
-  c4.(  d8  h a g a
+  e2( fis4)
   %14
-  fis4.  g8 g)  d'16( h)  d8 d16( h)
+  e2( d4)( 
   %15
-  d8( e)  e( g)  e\(( c)  h a
+  d2 r4
   %16
-  d4.  e8  h4.  a16 g
+  d2( e4)
   %17
-  \) g8  \relative c'' { d16( h)  d8 d16( h)  d8( e)  e( g) }
+  d2( cis4)(
   %18
-  c8 c16( a)   c8 c16( a)   c8( fis)   fis( a)
+  cis2) r4
   %19
-  \repeat unfold 2 { g8( g32) a h16   g h a d, }
+  cis2 d4
   %20
-  \repeat unfold 2 { g8 h32( c d16   h g a fis ) }
+  cis2( h4)
   %21
-  g4   e(   dis4.   e8
+  h2.
   %22
-  c4   h   g)   fis8( e
+  h2( a4)
   %23
-  a4   h8 gis   a4.)   h8(
+  a2.(
   %24
-  c4   d8 h   c4)   e8( d
+  a4) r4 r4
   %25
-  e4 f! \relative c'' { gis) a8( h
+  \key c \major
+  e4 a h
   %26
-  c4 h8 a a8) } e16( c) e8 e16( c)
+  c4 h a
   %27
-  e8( f!) f( a) \relative c'' { d d16( h) d8 d16( h)
+  e2.(
   %28
-  d8( gis) gis( h) a8\(( a32) h c16 a16 c h e,\) }
+  e2) r4
   %29
-  a8( a32) h c16 a c h e, a8 c32( d e16 c a h gis
+  e4 a h
   %30
-  a4) s \relative c'' { a8 r gis8 fis?
+  c h a
   %31
-  g4. h8( a4 g8 fis16 g
+  fis2.(
   %32
-  fis4 e8 d) } \relative c'' { d4( cis8 h
+  fis2) r4
   %33
-  h4.) d8( cis8[ d16 e] cis8 h
+  fis4 g a
   %34
-  ais4 gis8 fis) } r8 fis16[( dis)] fis8[ fis16( dis)]
+  h4 a g
   %35
-  <dis fis>8[( <e g>)] <e g>[( <g h>)] a[ a16( e)] e8[ e16( cis)]
+  fis4 g a
   %36
-  e8[( fis)] fis[( a)] \relative c'' { a8[ a16 fis] a8[ a16 fis]
-  %37
-  a8[ g] g4 gis8[ gis16 e] gis8[ gis16 e]
-  %38
-  <gis h>8[ <a cis>] a4 a fis8[ fis16 d]
+  h2 r4
+  %37 Rit... ab letzterr 4tel
+  c4 h a
+  %38 ... und Fermate am Taktanfang
+  gis2.(
   %39
-  cis8 e cis4 d d
-  %40
-  <d fis>4  <cis e>8 d  s2 }
+  gis2) r4
+  %40  A TEMPO
+  \key fis \major
+  e4 e8 e e4
+  %41
+  e4 d8 d d4(
+  %42
+  d2) r4
+  %43 Rit... letzte 4tel
+  h4 h a
+  %44 Fermate Anfang
+  c2.(
+  %45
+  c2) r4
 }
 
 % Assuming voiceThree in Left Hand (context "LinkeHand") and so
@@ -112,13 +124,13 @@ goingTwoFromThree = \change Staff = "RechteHand" \voiceTwo
 RHStimmeZweiNoten = \relative g'{
 %  \voiceTwo
   %1
-  s1
+  \repeat unfold 2 { h8 h16 g }   h8[ c]   c e
   %2
-  s1
+  \sU \repeat unfold 2 { a,8 a16 fis }   \sD a8[ c]   a8 c
   %3
-  s1
+  h8 h   s4   e8 e   s4
   %4
-  s1
+  h8 s8   s4   h8 s8   s c
   %5
   h8 s8   \relative c' { d4   e   fis8 g
   %6
