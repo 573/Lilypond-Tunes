@@ -24,14 +24,13 @@ sU = \stemUp
 RHStimmeEinsNoten = \relative c'' {
 %  \voiceOne
   %1
-  \sD \repeat unfold 2 { <h d>8 <h d>16( <g h>) }  <h d>8[( <c e>)]  <c e>(  <e g>)
+  \sD \repeat unfold 2 { d8 d16( h) }  d8[( e)]  e(  g)
   %2
-  \sU \repeat unfold 2 { <a, c>8 <a c>16( <fis a>) }  \sD <a c>8[( <c fis>)]
-  <a fis'>[( <c a'>)]
+  \sU \repeat unfold 2 { c,8 c16( a) }  \sD c8[( fis)]  fis[( a)]
   %3
-  <h g'>8[\(( <h g'>32) a' h16]  g[ h a d,]\)  <e g>8[\(( <e g>32) a h16]  g[ h a d,]
+  g8[\(( g32) a h16]  g[ h a d,]\)  g8[\(( g32) a h16]  g[ h a d,]
   %4
-  <h g'>8[\) h'32( c d16)]  h[( g a fis]  <h, g>8[) h32( c d16)]  h[( g <c a> fis]
+  g8[\) h32 c d16]  h[( g a fis]  g8[) h32 c d16]  h[( g a fis]
   %5
   g8) r8   \relative g' { h8( a   a4.)   h8(
   %6
@@ -112,13 +111,13 @@ goingTwoFromThree = \change Staff = "RechteHand" \voiceTwo
 RHStimmeZweiNoten = \relative g'{
 %  \voiceTwo
   %1
-  s1
+  \repeat unfold 2 { h8 h16 g }   h8[ c]   c e
   %2
-  s1
+  \sU \repeat unfold 2 { a,8 a16 fis }   \sD a8[ c]   a8 c
   %3
-  s1
+  h8 h   s4   e8 e   s4
   %4
-  s1
+  h8 s8   s4   h8 s8   s c
   %5
   h8 s8   \relative c' { d4   e   fis8 g
   %6
