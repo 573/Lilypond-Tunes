@@ -34,6 +34,7 @@ sU = \stemUp
 % Assuming voiceThree in Left Hand (context "LinkeHand")
 goingThreeFromTwo = \change Staff = "LinkeHand" \voiceThree
 goingTwoFromThree = \change Staff = "RechteHand" \voiceTwo
+
 goingOneFromTwo = \voiceOne
 goingTwoFromOne = \voiceTwo
 
