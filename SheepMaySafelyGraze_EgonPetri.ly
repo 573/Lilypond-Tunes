@@ -1,12 +1,21 @@
 \version "2.12.3-1.mingw"
 
+Ae =\markup { \char ##x00C4 }
+ae =\markup { \char ##x00E4 }
+Oe =\markup { \char ##x00D6 }
+oe = \markup { \char ##x00F6 }
+Ue =\markup { \char ##x00DC }
+ue =\markup { \char ##x00FC }
+Sz =\markup { \char ##x00DF }
+
 \header {
-  title = "Sheeps may safely graze - Schafe können sicher weiden (from Cantata
-  No. 208) - Arranged by Egon Petri"
+  title = \markup {\concat{"Sheep may safely graze"}}
+  subtitle = "(from J. S. Bach's Birthday Cantata)"
   source = "Printed Sheet"
-  composer = "J. S. Bach"
+  composer = "written by J. S. Bach, arranged by Egon Petri"
   enteredby = "dk"
-  copyright = "(C) 1985, for all Countries Chester Music Ltd. 8/9 Frith Street, London W1D 3JB"
+  copyright = "(C) Copyright 1944 in U. S. A. by Boosey & Hawkes, Inc.;
+  Copyright Renewed. Copyright for all Countries. All rights reserved."
   maintainer = "Daniel Kahlenberg"
   footer = "Mutopia-2005/06/23"
 }
@@ -21,10 +30,13 @@ global =  {
 
 sD = \stemDown
 sU = \stemUp
-% Assuming voiceThree in Left Hand (context "LinkeHand") and so
+% Assuming voiceThree in Left Hand (context "LinkeHand")
 goingThreeFromTwo = \change Staff = "LinkeHand" \voiceThree
 goingTwoFromThree = \change Staff = "RechteHand" \voiceTwo
-  
+
+goingOneFromTwo = \voiceOne
+goingTwoFromOne = \voiceTwo
+
 RHStimmeEinsNoten = \relative g'' {
 %  \voiceOne
 %<es g b>2 r
@@ -57,14 +69,14 @@ LHStimmeZweiNoten = \relative c {
         \clef "treble"
         \new Voice {
           \overrideProperty "Score.NonMusicalPaperColumn"
-          #'line-break-system-details #'((Y-offset . 35))
+          #'line-break-system-details #'((Y-offset . 15))
           \repeat unfold 2 { s1 * 2 \break }
-          \repeat unfold 2 { s1 * 3 \break } \pageBreak
-          \repeat unfold 5 { s1 * 3 \break } \pageBreak
-          \repeat unfold 5 { s1 * 3 \break } \pageBreak
+          \repeat unfold 2 { s1 * 3 \break }\pageBreak
+          \repeat unfold 5 { s1 * 3 \break }\pageBreak
+          \repeat unfold 5 { s1 * 3 \break }\pageBreak
           s1 * 4 \break
-          \repeat unfold 3 { s1 * 3 \break }
-          s1 * 4
+          \repeat unfold 5 { s1 * 3 \break }
+          s1 * 4 \break
         }
         \new Voice { \voiceOne \RHStimmeEinsNoten }
         \new Voice { \voiceTwo \RHStimmeZweiNoten }
@@ -77,14 +89,14 @@ LHStimmeZweiNoten = \relative c {
         \clef "bass"
         \new Voice {
           \overrideProperty "Score.NonMusicalPaperColumn"
-          #'line-break-system-details #'((Y-offset . 35))
+          #'line-break-system-details #'((Y-offset . 15))
           \repeat unfold 2 { s1 * 2 \break }
-          \repeat unfold 2 { s1 * 3 \break } \pageBreak
-          \repeat unfold 5 { s1 * 3 \break } \pageBreak
-          \repeat unfold 5 { s1 * 3 \break } \pageBreak
+          \repeat unfold 2 { s1 * 3 \break }\pageBreak
+          \repeat unfold 5 { s1 * 3 \break }\pageBreak
+          \repeat unfold 5 { s1 * 3 \break }\pageBreak
           s1 * 4 \break
-          \repeat unfold 3 { s1 * 3 \break }
-          s1 * 4
+          \repeat unfold 5 { s1 * 3 \break }
+          s1 * 4 \break
         }
         \new Voice { \voiceThree \LHStimmeEinsNoten }
         \new Voice { \voiceFour  \LHStimmeZweiNoten }
